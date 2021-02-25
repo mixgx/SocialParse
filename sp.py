@@ -29,6 +29,7 @@ while stop == 0:
             from lxml import html
             from bs4 import BeautifulSoup
             import requests
+            import telebot
 
             print('done')
             line_2 = "downloading html..."
@@ -70,18 +71,26 @@ while stop == 0:
     from lxml import html
     from bs4 import BeautifulSoup
 
-    print('\033[33m      _/_/_/                      _/            _/  _/_/_/  \033[31m |https://github.com/mixgx/SocialParse|   ')
+    def StandardStart():
+        a = open('bad.py', 'r').read()
+        print(a)
+
+    print('\033[33m [    _/_/_/                      _/            _/  _/_/_/  \033[31m |https://github.com/mixgx/SocialParse|   ')
     print('\033[33m   _/          _/_/      _/_/_/        _/_/_/  _/  _/    _/    _/_/_/  _/  _/_/    _/_/_/    _/_/    ')
     print('    _/_/    _/    _/  _/        _/  _/    _/  _/  _/_/_/    _/    _/  _/_/      _/_/      _/_/_/_/   ')
     print('       _/  _/    _/  _/        _/  _/    _/  _/  _/        _/    _/  _/            _/_/  _/          ')
-    print('_/_/_/      _/_/      _/_/_/  _/    _/_/_/  _/  _/          _/_/_/  _/        _/_/_/      _/_/_/     \033[32m')
+    print('_/_/_/      _/_/      _/_/_/  _/    _/_/_/  _/  _/          _/_/_/  _/        _/_/_/      _/_/_/     \033[32m]\033[37m')
 
-    import requests
-    url = 'https://github.com/mixgx/SocialParse/blob/main/README.md'
-    r = requests.get(url)
-    htmlf = r.content.decode()
+    print('1)Standard start')
+    print('2)Submit your site')
+    print('3)Telegram RMS')
 
-    soup = BeautifulSoup(htmlf, features="lxml")
-    print(soup.find('article', {'class': 'markdown-body entry-content container-lg'}).text)
+    start = input('1/2>')
+    if start == "1":
+        print('Not Now :(')
+    if start == "2":
+        print('Not Now :(')
+    if start == "3":
+        from tgrms import *
 
     break
