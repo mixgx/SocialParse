@@ -7,7 +7,7 @@ import getpass
 import requests
 from config import *
 
-bot = telebot.TeleBot('1655098823:AAHHgy6QiErjDUSpahOH6H9Lj-Cef5X9Xbo')
+bot = telebot.TeleBot('apikey')
 password = 'password'
 global acsess
 global admin
